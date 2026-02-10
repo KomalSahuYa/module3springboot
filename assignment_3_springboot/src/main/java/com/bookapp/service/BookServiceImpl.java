@@ -53,7 +53,7 @@ public class BookServiceImpl implements BookService{
 		bookRepo.delete(book);
 		
 	}
-	
+	@Override
 	public List<BookDto> getByAuthor(String author){
 		return bookRepo.findByAuthor(author).stream().map(EntityDtoMapper::convertToBookDto).toList();
 	}
@@ -65,6 +65,8 @@ public class BookServiceImpl implements BookService{
 	public List<BookDto> getByPriceLessThan(Double Price){
 		return null;
 	}
+	
+	@Override
 	public List<BookDto> getBooksInPriceRange(Double min,Double max){
 		return bookRepo.findByPriceRange(min, max).stream().map(EntityDtoMapper::convertToBookDto).toList();
 	}

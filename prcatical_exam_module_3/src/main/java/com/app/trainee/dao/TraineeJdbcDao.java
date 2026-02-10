@@ -41,7 +41,7 @@ public class TraineeJdbcDao implements TraineeDao {
 			
 		}
 		catch(DataAccessException ex) {
-			throw new TraineeDataAccessException("JDBC: Failed to fetch trainee with id=" + traineeId, ex);
+			throw new TraineeDataAccessException("trainee with id " + traineeId+" not found", ex);
 		}
 	    
 	}

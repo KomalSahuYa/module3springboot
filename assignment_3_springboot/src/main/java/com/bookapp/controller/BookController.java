@@ -49,6 +49,11 @@ public class BookController {
 		return bookService.getByAuthor(author);
 	}
 	
+	//search by price range
+	@GetMapping("/price-range")
+	public List<BookDto> get
+	
+	
 	
 
 }
